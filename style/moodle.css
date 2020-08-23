@@ -12577,8 +12577,10 @@ body.h5p-embed .h5pmessages {
   .dashboard-card-deck .dashboard-card .dashboard-card-footer {
     padding: 0.8rem; }
 
-.dashboard-card-deck.fixed-width-cards .dashboard-card {
-  width: 300px; }
+@media (min-width: 576px) {
+  .dashboard-card-deck.fixed-width-cards .dashboard-card {
+    width: 300px;
+    max-width: 100%; } }
 
 @media (min-width: 576px) {
   .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
@@ -13257,19 +13259,15 @@ body:not(.editing) .sitetopic ul.section {
   background-color: rgba(0, 0, 0, 0.05); }
 
 .course-content .current {
-  position: relative;
-  &::after {
-    content: "";
-    border-left: #1177d1 2px solid;
-    position: absolute;
-    left: -1.25rem;
-    top: 0;
-    bottom: 0;
-  }
-  &::before {
-    display: none;
-  }
-}
+  position: relative; }
+
+.course-content .current::before {
+  content: "";
+  border-left: #1177d1 2px solid;
+  position: absolute;
+  left: -1.25rem;
+  top: 0;
+  bottom: 0; }
 
 .course-content .section-summary {
   border: 1px solid #dee2e6;
@@ -16603,9 +16601,6 @@ select {
 
 .path-mod-choice .horizontal .choices .option {
   display: inline-block; }
-
-.path-mod-choice .choices .option label {
-  vertical-align: top; }
 
 .path-mod-feedback .feedback_form .col-form-label {
   display: block !important;
