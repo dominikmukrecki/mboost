@@ -13633,9 +13633,6 @@ span.editinstructions {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
-.courses .coursebox.even {
-  background-color: rgba(0, 0, 0, 0.05); }
-
 .courses > .paging.paging-morelink {
   text-align: center;
   padding: 1rem; }
